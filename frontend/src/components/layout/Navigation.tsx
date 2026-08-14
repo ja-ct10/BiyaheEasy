@@ -2,8 +2,9 @@
 
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { MapPin, LogOut, User } from 'lucide-react';
+import { LogOut, User } from 'lucide-react';
 import { NAV_LINKS } from '@/lib/constants';
 import { useAuth } from '@/context/AuthContext';
 import { cn } from '@/lib/utils';
@@ -40,8 +41,8 @@ export function Navigation() {
       <nav className="mx-auto max-w-6xl px-6">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
-              <MapPin className="w-4.5 h-4.5 text-background" />
+            <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center p-0.5">
+              <Image src="/logo.png" alt="BiyaheEasy" width={28} height={28} className="object-contain" />
             </div>
             <span className="text-base font-bold text-white">BiyaheEasy</span>
           </Link>

@@ -7,7 +7,8 @@ import { z } from 'zod';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { MapPin, Mail, Lock, ArrowRight } from 'lucide-react';
+import { Mail, Lock, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Card } from '@/components/ui/Card';
@@ -61,8 +62,8 @@ export default function LoginPage() {
         className="w-full max-w-md relative z-10"
       >
         <div className="text-center mb-8">
-          <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mx-auto mb-5 shadow-lg shadow-accent/20">
-            <MapPin className="w-7 h-7 text-background" strokeWidth={1.5} />
+          <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mx-auto mb-5 shadow-lg shadow-accent/20 p-2">
+            <Image src="/logo.png" alt="BiyaheEasy" width={64} height={64} className="object-contain" />
           </div>
           <h1 className="text-2xl font-bold text-white mb-2 tracking-tight">Welcome back</h1>
           <p className="text-sm text-muted">Sign in to access your routes and preferences</p>
