@@ -8,7 +8,7 @@ const withPWA = require('next-pwa')({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['localhost'],
+    domains: ['localhost', 'xqeowtwfnzzkysxrmwez.supabase.co'],
     formats: ['image/avif', 'image/webp'],
   },
   experimental: {

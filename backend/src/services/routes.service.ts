@@ -395,6 +395,10 @@ export class RoutesService {
     return this.sortByPriority(filtered.length > 0 ? filtered : routes, preferences.priority);
   }
 
+  sortRoutesByPriority(routes: Route[], priority: string): Route[] {
+    return this.sortByPriority(routes, priority);
+  }
+
   private sortByPriority(routes: Route[], priority: string): Route[] {
     switch (priority) {
       case 'fastest':
@@ -402,8 +406,10 @@ export class RoutesService {
       case 'cheapest':
         return routes.sort((a, b) => a.total_fare - b.total_fare);
       case 'least_transfers':
+      case 'fewest-transfers':
         return routes.sort((a, b) => a.transfers - b.transfers);
       case 'most_comfortable':
+      case 'comfortable':
         return routes.sort((a, b) => b.comfort_score - a.comfort_score);
       default:
         return routes;

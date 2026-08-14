@@ -5,6 +5,9 @@ export interface User {
   avatar_url?: string;
   home_location?: string;
   work_location?: string;
+  preferred_transport_modes?: string[];
+  preferred_priority?: string;
+  daily_budget_limit?: number;
   preferences?: UserPreferences;
   created_at: string;
 }
@@ -80,6 +83,7 @@ export interface BudgetGoal {
   user_id: string;
   monthly_limit: number;
   daily_limit?: number;
+  weekly_limit?: number;
   created_at: string;
 }
 
