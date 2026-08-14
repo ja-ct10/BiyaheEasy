@@ -51,18 +51,21 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-6 py-12">
+    <div className="min-h-screen flex items-center justify-center px-6 py-12 relative">
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-accent/3 rounded-full blur-3xl" />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="w-full max-w-md"
+        transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+        className="w-full max-w-md relative z-10"
       >
         <div className="text-center mb-8">
-          <div className="w-12 h-12 rounded-btn bg-accent flex items-center justify-center mx-auto mb-4">
-            <MapPin className="w-6 h-6 text-background" />
+          <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mx-auto mb-5 shadow-lg shadow-accent/20">
+            <MapPin className="w-7 h-7 text-background" strokeWidth={1.5} />
           </div>
-          <h1 className="text-h3 font-bold text-white mb-2">Welcome back</h1>
-          <p className="text-sm text-muted">Sign in to access your routes and preferences.</p>
+          <h1 className="text-2xl font-bold text-white mb-2 tracking-tight">Welcome back</h1>
+          <p className="text-sm text-muted">Sign in to access your routes and preferences</p>
         </div>
 
         <Card hover={false} className="p-6 md:p-8">
