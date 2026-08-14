@@ -18,7 +18,7 @@ export function Card({ className, hover = true, glow = false, children, ...props
         glow && 'shadow-glow',
         className
       )}
-      {...props}
+      {...(props as any)}
     >
       {children}
     </motion.div>
