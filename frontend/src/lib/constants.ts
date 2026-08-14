@@ -37,7 +37,6 @@ export const NAV_LINKS = [
   { href: '/plan', label: 'Plan Trip' },
   { href: '/trips', label: 'My Trips' },
   { href: '/budget', label: 'Budget' },
-  { href: '/profile', label: 'Profile' },
 ] as const;
 
 export const TRANSIT_STATUS = [
